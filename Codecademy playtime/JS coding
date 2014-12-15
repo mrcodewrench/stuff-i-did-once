@@ -1,0 +1,39 @@
+//trick or treat program
+var candyDecider = function(junk) {
+      //candy function  
+    var candyToReturn = "poison apple";
+    
+    if (junk < .25) {
+        candyToReturn = "Poop";
+    } 
+    else if (junk < .5) {
+        candyToReturn = "Reese's";
+    } 
+    else if (junk < .75) {
+        candyToReturn = "Gum";
+    } 
+    else if ( junk <= 1) {
+        candyToReturn = "Lolipop";
+    }
+    
+    return candyToReturn;
+}
+
+var kids = ["Anna", "Jonathon", "Jason", "Bear", "Mini", "Rachel", "Mike"];
+
+console.log(kids.length + " kids are at the door!!")
+
+for (var i = 0; i < kids.length; i++ ){
+    var randomcandy = Math.random();
+    var candy = candyDecider(randomcandy);
+    
+    console.log("Here's one "  + candy + " for you " + kids[i]);
+
+}
+
+
+
+
+  
+
+//console.log("mike gets " + candy);
